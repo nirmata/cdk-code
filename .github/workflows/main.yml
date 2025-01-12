@@ -60,9 +60,9 @@ jobs:
      # - name: nctl login
      #   run: nctl login --url $NIRMATA_URL --userid anusha.hegde@nirmata.com --token $NIRMATA_TOKEN
         
-    #  - name: file-o/p
-    #    run: |
-    #      cat sample-cdk/cdk.out/MyEcsStack.template.json
+      - name: file-o/p
+        run: |
+          cat sample-cdk/cdk.out/MyEcsStack.template.json
           
       - name: NCTL Scan Repository for CDK
         run: |
