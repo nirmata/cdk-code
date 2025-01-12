@@ -31,3 +31,10 @@ class MyEcsStack(Stack):
                 container_port=80
             )
         )
+# Define the app and specify the region
+app = App()
+# Specify the AWS region for the stack
+env = Environment(region="us-east-1")  # Replace "us-east-1" with your desired region
+# Create the ECS stack with the specified environment
+MyEcsStack(app, "MyEcsStack", env=env)
+app.synth()
