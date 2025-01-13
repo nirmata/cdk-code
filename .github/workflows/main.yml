@@ -63,6 +63,10 @@ jobs:
       - name: file-o/p
         run: |
           cat sample-cdk/cdk.out/MyEcsStack.template.json
+
+      - name: Performing scan for Maintenance window
+        run: | 
+          nctl scan json -r sample-cdk/cdk.out/MyEcsStack.template.json --policies https://github.com/nirmata/change-mgmt-policies/tree/main --details --publish 
           
       - name: NCTL Scan Repository for CDK
         run: |
