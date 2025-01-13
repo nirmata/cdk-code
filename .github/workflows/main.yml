@@ -10,7 +10,6 @@ on:
 
 env:
   NIRMATA_TOKEN: ${{ secrets.NIRMATA_TOKEN }}
-  NIRMATA_URL: ${{ secrets.NIRMATA_URL }}
 
 jobs:
   NCTL-Scan-CDK:
@@ -58,7 +57,7 @@ jobs:
           cdk synth --json 
 
       - name: nctl login
-        run: nctl login nch --url $NIRMATA_URL --userid anusha.hegde@nirmata.com --token $NIRMATA_TOKEN
+        run: nctl login nch --url https://www.nirmata.io --userid dolis@nirmata.com --token $NIRMATA_TOKEN
         
       - name: file-o/p
         run: |
