@@ -58,8 +58,6 @@ jobs:
 
 
       - name: nctl login
-        env:
-         NIRMATA_TOKEN: ${{ secrets.NIRMATA_TOKEN }}
         run: nctl login nch --url https://www.nirmata.io --userid dolis@nirmata.com --token $NIRMATA_TOKEN
         
       - name: file-o/p
