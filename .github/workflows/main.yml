@@ -3,10 +3,10 @@ run-name: ${{ github.actor }} has triggered Scan Action 🚀
 on:
   pull_request:
     branches:
-      - "main"
+      - "us-west-1"
   push:
     branches:
-      - "main"
+      - "us-west-1"
 
 env:
   NIRMATA_TOKEN: ${{ secrets.NIRMATA_TOKEN }}
